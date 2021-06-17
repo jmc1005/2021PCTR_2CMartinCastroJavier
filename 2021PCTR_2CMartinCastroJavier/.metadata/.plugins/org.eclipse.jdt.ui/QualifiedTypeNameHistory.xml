@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="java.util.Hashtable"/>
+    <fullyQualifiedTypeName name="java.util.Enumeration"/>
+    <fullyQualifiedTypeName name="java.util.logging.Logger"/>
+    <fullyQualifiedTypeName name="java.util.logging.Level"/>
+    <fullyQualifiedTypeName name="main.java.pctr2c.IJuego"/>
+    <fullyQualifiedTypeName name="main.java.pctr2c.Juego"/>
+    <fullyQualifiedTypeName name="main.java.pctr2c.ActividadAliada"/>
+    <fullyQualifiedTypeName name="main.java.pctr2c.ActividadEnemiga"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+</qualifiedTypeNameHistroy>
