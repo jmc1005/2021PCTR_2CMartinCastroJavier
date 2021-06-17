@@ -1,0 +1,10 @@
+package main.java.pctr2c;
+
+public class SistemaLanzador {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,70 @@
+package main.java.pctr2c;
+
+import java.util.Hashtable;
+
+public class Juego implements IJuego {
+
+	private int contadorEnemigosTotales;
+	private Hashtable<Integer, Integer> contadoresEnemigosTipos;
+	private Hashtable<Integer, Integer> contadoresEliminadosTipos;
+	private final int MINENEMIGOS = 0;
+	private final int MAXENEMIGOS = 0;
+
+	@Override
+	public void generarEnemigo(int numero) {
+		comprobarAntesDeGenerar();
+
+		// Si no existe valor en el contador lo inicializamos
+		inicializarContadores(numero, contadoresEnemigosTipos);
+
+		contadorEnemigosTotales++;
+		contadoresEnemigosTipos.put(numero, contadoresEnemigosTipos.get(numero) + 1);
+
+		// Imprimimos el estado del enemigo
+		imprimirInfo(numero, "Entrada");
+	}
+	
+	@Override
+	public void eliminarEnemigo(int numero) {
+		comprobarAntesDeEliminar();
+
+		// Si no existe valor en el contador lo inicializamos
+		inicializarContadores(numero, contadoresEliminadosTipos);
+
+		contadorEnemigosTotales--;
+		contadoresEliminadosTipos.put(numero, contadoresEliminadosTipos.get(numero) + 1);
+
+		// Imprimimos el estado del enemigo
+		imprimirInfo(numero, "Entrada");
+
+	}
+	
+	private void inicializarContadores(int numero, Hashtable<Integer, Integer> contadores) {
+		// inicializamos
+		if (contadores.get(numero) == null) {
+			contadores.put(numero, MINENEMIGOS);
+		}
+	}
+	
+
+	private void imprimirInfo(int numero, String s) {
+
+	}
+
+	public int sumarContadores() {
+		return 0;
+	}
+
+	protected void checkInvariantes() {
+
+	}
+
+	protected void comprobarAntesDeGenerar() {
+
+	}
+
+	protected void comprobarAntesDeEliminar() {
+
+	}
+
+}

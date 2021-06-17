@@ -1,0 +1,47 @@
+package main.java.pctr2c;
+
+import java.util.Hashtable;
+
+public class Juego implements IJuego {
+
+	private int contadorEnemigosTotales;
+	private Hashtable<Integer, Integer> contadoresEnemigosTipos;
+	private Hashtable<Integer, Integer> contadoresEliminadosTipos;
+	private final int MINENEMIGOS = 0;
+	private final int MAXENEMIGOS = 0;
+
+	@Override
+	public void generarEnemigo(int num) {
+		comprobarAntesDeGenerar();
+		
+		
+
+	}
+
+	@Override
+	public void eliminarEnemigo(int num) {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void imprimirInfo(int numero, String s) {
+
+	}
+
+	public int sumarContadores() {
+		return 0;
+	}
+
+	protected void checkInvariantes() {
+
+	}
+
+	protected void comprobarAntesDeGenerar() {
+
+	}
+
+	protected void comprobarAntesDeEliminar() {
+
+	}
+
+}

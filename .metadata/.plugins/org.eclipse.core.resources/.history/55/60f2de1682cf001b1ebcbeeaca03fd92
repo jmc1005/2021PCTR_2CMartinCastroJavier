@@ -1,0 +1,25 @@
+package main.java.pctr2c;
+
+import java.util.Hashtable;
+
+public class Juego implements IJuego{
+
+	private int contadorEnemigosTotales;
+	private Hashtable<String, Integer> contadoresEnemigosTipos;
+	private Hashtable<String, Integer> contadoresEliminadosTipos;
+	private final int  MINENEMIGOS=0;
+	private final int  MAXENEMIGOS=0;
+	
+	@Override
+	public void generarEnemigo(int num) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void eliminarEnemigo(int num) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
