@@ -72,7 +72,7 @@ public class Juego implements IJuego {
 
 	private void imprimirInfo(int numero, String movimiento) {
 		System.out.println(movimiento + " tipo " + numero);
-		System.out.println("--> Enemigos totales " + sumarContadores());
+		System.out.println("--> Enemigos totales " + contadorEnemigosTotales);
 
 		Integer contIN, contOUT;
 
@@ -113,6 +113,7 @@ public class Juego implements IJuego {
 	// de enemigos
 	protected void checkInvariante() {
 		int sumarContadores = sumarContadores();
+		assert sumarContadores >= contadorEnemigosTotales : "INV: La suma de contadores debe ser mayor o igual al valor del contador de enemigos";
 		assert sumarContadores == contadorEnemigosTotales : "INV: Los contadores de enemigos vivos deben sumar lo mismo que el contador total de enemigos";
 	}
 

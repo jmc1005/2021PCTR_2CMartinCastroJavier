@@ -72,7 +72,7 @@ public class Juego implements IJuego {
 
 	private void imprimirInfo(int numero, String movimiento) {
 		System.out.println(movimiento + " tipo " + numero);
-		System.out.println("--> Enemigos totales " + sumarContadores());
+		System.out.println("--> Enemigos totales " + contadorEnemigosTotales);
 
 		Integer contIN, contOUT;
 
