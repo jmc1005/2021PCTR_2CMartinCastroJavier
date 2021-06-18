@@ -5,9 +5,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ActividadAliada implements Runnable {
+public class ActividadAliada extends Thread {
 
-	private final int NUMENEMIGOS = 20;
+	private final int TIPOSENEMIGOS = 4;
 	private int numero;
 	private IJuego juego;
 
@@ -16,10 +16,10 @@ public class ActividadAliada implements Runnable {
 		this.juego = juego;
 	}
 
-	@Override 
-	public void run() { 
-		for (int i = 0; i < NUMENEMIGOS; i++) {
-			try { 
+	@Override
+	public void run() {
+		for (int i = 0; i < TIPOSENEMIGOS; i++) {
+			try {
 				Random rand = new Random();
 				// Un enemigo simulará su actividad durmiendo un tiempo aleatorio entre 1 y 5
 				// segundos
@@ -27,7 +27,7 @@ public class ActividadAliada implements Runnable {
 				TimeUnit.MILLISECONDS.sleep(randnum * 1000);
 				juego.generarEnemigo(numero);
 			} catch (InterruptedException e) {
-				Logger.getGlobal().log(Level.INFO, "Salida interrumpida");
+				Logger.getGlobal().log(Level.INFO, "Acción generar enemigo interrumpida");
 				Logger.getGlobal().log(Level.INFO, e.toString());
 				return;
 			}

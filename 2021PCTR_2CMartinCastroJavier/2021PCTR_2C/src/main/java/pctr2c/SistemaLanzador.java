@@ -15,7 +15,7 @@ public class SistemaLanzador {
 	public static void main(String[] args) {
 		IJuego juego = new Juego();
 
-		for (int i = 0; i < Integer.parseInt(args[0]); i++) {
+		for (int i = 0; i < 4; i++) {
 
 			// Creación de hilos de generar enemigos
 			ActividadAliada aliados = new ActividadAliada(i, juego);
